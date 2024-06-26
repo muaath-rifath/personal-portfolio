@@ -67,7 +67,7 @@ const SkillsSection: React.FC = () => {
     <section className="mt-20 pb-8">
       <div className=" px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Skills</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-center text-white sm:text-4xl">Skills</h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
             Here are some of the key skills and technologies I've been working with:
           </p>
