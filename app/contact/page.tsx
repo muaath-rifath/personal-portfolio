@@ -149,7 +149,7 @@ export default function Hero() {
               control={form.control}
               name="phone"
               render={({ field }) => (
-                <FormItem className="flex flex-col items-start">
+                <FormItem className="flex flex-col items-start w-full">
                   <FormLabel className="text-left">Phone Number</FormLabel>
                   <FormControl className="w-full">
                     <PhoneInput placeholder="Enter a phone number" {...field} />
