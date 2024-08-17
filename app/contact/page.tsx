@@ -79,7 +79,7 @@ export default function Hero() {
 
   return (
     <section className="lg:flex w-full justify-center items-cente p-4">
-      <div className="lg:flex flex-col p-4 lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
+      <div className="lg:flex flex-col p-4 lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3 lg:dark:bg-zinc-950">
         <span className="p-4 inline-block w-full bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
           <h1 className="text-3xl text-center font-bold">Contact</h1>
         </span>
@@ -87,7 +87,7 @@ export default function Hero() {
           <p className="text-lg lg:flex items-center flex-wrap gap-4">
             <span className="flex items-center inline-block gap-2">
               <MdAttachEmail />
-              <span className="">
+              <span className="text-primary">
                 <Link href="mailto:muaathrifath@gmail.com" target="_blank" type="email">Email</Link>:
               </span>
             </span>
@@ -96,7 +96,7 @@ export default function Hero() {
           <p className="text-lg lg:flex items-center flex-wrap gap-4">
             <span className="flex items-center inline-block gap-2">
               <FaPhoneAlt />
-              <span className="">
+              <span className="text-primary">
                 <Link href="tel:+918883735079" target="_blank" type="tel">Phone</Link>:
               </span>
             </span>
@@ -105,7 +105,7 @@ export default function Hero() {
           <p className="text-lg lg:flex items-center flex-wrap gap-4">
             <span className="flex items-center inline-block gap-2">
               <FaAddressCard />
-              <span className="">
+              <span className="text-primary">
                 <Link href="" target="_blank">Address</Link>:
               </span>
             </span>

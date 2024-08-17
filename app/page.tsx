@@ -4,8 +4,8 @@ import Link from "next/link";
 
   export default function Home() {
     return (
-      <section className="container grid lg:grid-cols-2 -mt-28 place-items-center py-20 md:py-32 gap-10 bottom-4">
-      <div className="text-center h-screen lg:h-auto flex flex-col items-center lg:text-start space-y-6">
+      <section className="container grid lg:grid-cols-2 -mt-20 lg:-mt-40 place-items-center py-20 md:py-32 gap-20">
+      <div className="text-center h-screen md:h-auto flex flex-col items-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl flex flex-col items-center mt-40 lg:pt-8 font-bold">
           <h1 className="inline py-2">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
@@ -40,12 +40,13 @@ import Link from "next/link";
       </div>
       
       {/* Hero cards sections */}
-      <div className="w-full lg:-mt-60 py-8">
+      <div className="w-full md:px-40 lg:px-0 lg:-mt-40 lg:pb-10 ">
         <HeroCards />
       </div>
-
+      
       {/* Shadow effect */}
       <div className="shadow"></div>
+      
     </section>
     );
   }
