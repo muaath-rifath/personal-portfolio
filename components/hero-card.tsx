@@ -13,7 +13,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 export const HeroCards = () => {
   return (
     <div className="flex flex-wrap gap-8 relative max-w-xl">
-      <Card className="absolute flex flex-col drop-shadow-xl shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
+      <Card className="absolute flex flex-col drop-shadow-md shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
             src="/assets/avatar.jpg"
@@ -21,7 +21,7 @@ export const HeroCards = () => {
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
           <CardTitle className="text-center">Mohamed Muaath Rifath <span className="inline-block">L M</span></CardTitle>
-          <CardDescription className="font-normal text-primary">
+          <CardDescription className="font-normal text-primary dark:text-primary">
             Software Engineer
           </CardDescription>
         </CardHeader>

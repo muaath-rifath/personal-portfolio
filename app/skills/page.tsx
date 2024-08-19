@@ -65,27 +65,6 @@ interface Language {
 const SkillsSection: React.FC = () => {
   return (
     <section className="mt-20 pb-8">
-      <div className=" px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-center text-white sm:text-4xl">Skills</h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-400">
-            Here are some of the key skills and technologies I've been working with:
-          </p>
-        </div>
-        <div className="mx-auto mt-10 grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-          {skills.map((skill) => (
-            <Card key={skill.name} className="transform bg-gray-50 transition-all hover:scale-105">
-              <CardHeader className="flex flex-row items-center justify-between space-x-4">
-                <CardTitle className="text-lg text-gray-900 dark:text-white font-semibold">{skill.name}</CardTitle>
-                <skill.icon className="h-6 w-6 text-gray-900 dark:text-white font-semibold" />
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{skill.description}</CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
       <div className="px-4 sm:px-6 lg:px-8 mt-10 pt-4">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Programming Languages and Frameworks</h2>
@@ -106,7 +85,7 @@ const SkillsSection: React.FC = () => {
                 <language.icon className="h-6 w-6 text-gray-900 dark:text-white font-semibold" />
               </CardHeader>
               <CardContent className={cn('p-4 rounded-b-lg', '')}>
-                <CardDescription className="text-gray-400 dark:text-gray-500">
+                <CardDescription className="text-gray-600 dark:text-gray-500">
                   {language.description}
                 </CardDescription>
               </CardContent>
