@@ -40,12 +40,12 @@ import Link from "next/link";
       </div>
       
       {/* Hero cards sections */}
-      <div className="w-full md:px-40 lg:px-0 lg:-mt-40 lg:pb-10">
+      <div className="w-full md:px-40 lg:px-0 lg:-mt-80 lg:pb-8">
         <HeroCards />
       </div>
       
       {/* Shadow effect */}
-      <div className="shadow pb-10"></div>
+      <div className="shadow sm:md-xl:pb-10"></div>
       
     </section>
     );
