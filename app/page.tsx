@@ -4,9 +4,9 @@ import Link from "next/link";
 
   export default function Home() {
     return (
-      <section className="container grid lg:grid-cols-2 -mt-20 lg:-mt-40 place-items-center py-20 md:py-32 gap-20">
+      <section className="container grid lg:grid-cols-2 -mt-20 lg:-mt-40 place-items-center items-center py-20 md:py-32 gap-20">
       <div className="text-center h-screen md:max-xl:h-screen flex flex-col items-center lg:text-start space-y-6">
-        <main className="text-5xl md:text-6xl flex flex-col items-center mt-40 lg:pt-8 font-bold">
+        <main className="text-5xl md:text-6xl flex flex-col place-items-center items-center lg:mt-40 lg:pt-20 font-bold">
           <h1 className="inline py-2">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
               Welcome
@@ -40,7 +40,7 @@ import Link from "next/link";
       </div>
       
       {/* Hero cards sections */}
-      <div className="w-full md:px-40 lg:px-0 lg:-mt-80 lg:pb-8">
+      <div className="w-full md:px-40 lg:px-0 lg:-mt-80">
         <HeroCards />
       </div>
       
