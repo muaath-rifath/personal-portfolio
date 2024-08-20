@@ -79,7 +79,7 @@ export default function Hero() {
 
   return (
     <section className="lg:flex w-full justify-center items-cente p-4">
-      <div className="lg:flex flex-col p-4 lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3 lg:dark:bg-zinc-950">
+      <div className="lg:flex flex-col p-4 backdrop-blur-xl lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
         <span className="p-4 inline-block w-full bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
           <h1 className="text-3xl text-center font-bold">Contact</h1>
         </span>
@@ -113,7 +113,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="mt-10 lg:mt-20 border border-gray-500 lg:rounded-l-none p-10 rounded-xl lg:w-1/3">
+      <div className="mt-10 lg:mt-20 border border-gray-500 lg:border-l-0 lg:rounded-l-none p-10 rounded-xl lg:w-1/3">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -126,7 +126,7 @@ export default function Hero() {
                 <FormItem className="flex flex-col items-start w-full">
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter Your Name" className="w-full" {...field} />
+                    <Input placeholder="Enter Your Name" className="w-full border-gray-400" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -139,7 +139,7 @@ export default function Hero() {
                 <FormItem className="flex flex-col items-start w-full">
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter Your Email" className="w-full" {...field} />
+                    <Input placeholder="Enter Your Email" className="w-full border-gray-400" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -165,7 +165,7 @@ export default function Hero() {
                 <FormItem className="flex flex-col items-start w-full">
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Enter Your Message" className="w-full" {...field} />
+                    <Textarea placeholder="Enter Your Message" className="w-full border-gray-400" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

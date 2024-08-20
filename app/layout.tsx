@@ -24,28 +24,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>
-  <ThemeProvider
-    attribute="class"
-    defaultTheme="system"
-    enableSystem
-    disableTransitionOnChange
-  >
-    <Topbar />
-    <main className="flex"> 
-        <section className="flex w-full z-10">
-        
-            {children}
-            
-    </section>
-    <ShootingStars minDelay={700}  />
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable
+      )}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Topbar />
+          <main className="flex">
+            <section className="flex w-full z-10">
+
+              {children}
+
+            </section>
+            <ShootingStars minDelay={700} />
             <StarsBackground starDensity={0.0005} />
-    </main>
-  </ThemeProvider>
-  
-</body>
+          </main>
+        </ThemeProvider>
+
+      </body>
     </html>
   )
 }

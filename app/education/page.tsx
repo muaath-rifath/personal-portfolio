@@ -32,7 +32,7 @@ const EducationSection: React.FC = () => {
   return (
     <section className="w-full mt-20 pb-10">
 
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">Education</h2>
           <p className="mt-4 text-gray-400 dark:text-gray-500">
@@ -44,7 +44,7 @@ const EducationSection: React.FC = () => {
             <Card
               key={index}
               className={cn(
-                'rounded-lg p-6 shadow-lg hover:scale-105 mx-4 lg:mx-20',
+                'rounded-lg p-6 shadow-lg hover:scale-105 mx-4 lg:mx-20 border border-gray-300',
                 'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
               )}
             >
@@ -52,10 +52,10 @@ const EducationSection: React.FC = () => {
                 <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
               </div>
-              <p className="mt-2 text-gray-400 dark:text-gray-500">{education.institution}</p>
-              <p className="mt-2 text-gray-400 dark:text-gray-500">{education.duration}</p>
+              <p className="mt-2 text-primary dark:text-primary">{education.institution}</p>
+              <p className="mt-2 text-gray-500 dark:text-gray-400">{education.duration}</p>
               {education.description && (
-                <p className="mt-2 text-gray-400 dark:text-gray-500">{education.description}</p>
+                <p className="mt-2 text-gray-600 dark:text-gray-300">{education.description}</p>
               )}
             </Card>
           ))}
