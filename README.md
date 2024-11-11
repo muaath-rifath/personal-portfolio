@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio
+
+This is a personal portfolio project built with [Next.js](https://nextjs.org/), incorporating SchadCn Components and Accernity UI.
 
 ## Getting Started
 
@@ -18,7 +20,26 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS
+- SchadCn Components
+- Accernity UI
+- MongoDB
+- Mongoose
+
+## Environment Variables
+
+To set up the environment variables for MongoDB, create a `.env` file in the root of your project and add the following:
+
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+MONGODB_DB=<dbname>
+```
+
+Replace `<username>`, `<password>`, and `<dbname>` with your actual MongoDB credentials and database name.
 
 ## Learn More
 
@@ -34,3 +55,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+
+This README.md includes the necessary instructions to set up the `.env` file for MongoDB. Let me know if you need any further modifications.
