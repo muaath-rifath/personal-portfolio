@@ -50,19 +50,6 @@ export default function Home() {
         {/* Shadow effect */}
         <div className="shadow"></div>
       </section>
-      <section className="w-full mt-60">
-        <div className="px-4 sm:px-6 lg:px-8 ">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl text-center">Programming languages and Frameworks</h2>
-            <p className="mt-4 text-gray-600 dark:text-gray-500">
-              Here is the programming languages and frameworks I have worked with:
-            </p>
-          </div>
-          <div className="mx-auto mt-10 grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-1">
-            
-          </div>
-        </div>
-      </section>
     </section>
   );
 }

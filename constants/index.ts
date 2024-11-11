@@ -11,12 +11,17 @@ export const sidebarLinks = [
     },**/
     {
       imgURL: "/assets/education.svg",
-      route: "/education",
-      label: "Education"
+      route: "/qualifications",
+      label: "Qualifications",
     },
     {
       imgURL: "/assets/contact.svg",
       route: "/contact",
       label: "Contact",
+    },
+    {
+      imgURL: "/assets/blog.svg",
+      route: "/blog",
+      label: "Blog",
     },
   ];

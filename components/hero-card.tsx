@@ -32,8 +32,6 @@ export const HeroCards = () => {
   
   In my coursework and projects, I have developed knowledge and skills in IoT, Cloud and Edge Computing, Docker and Kubernetes, Machine Learning at the Edge, Python, C, Node.js, Next.js, TypeScript, and networking.
   
-  I have earned multiple certifications from LinkedIn, ISRO, NPTEL, HackerRank, etc for completing courses and workshops on these topics, demonstrating my commitment to continuous learning and professional development. 
-  
   I am eager to apply my knowledge and skills to solve real-world problems and contribute to the advancement of science and technology. I am looking for internships or projects that will allow me to gain valuable experience and learn from experts and peers in the ECE domain.
           </p>
         </CardContent>
