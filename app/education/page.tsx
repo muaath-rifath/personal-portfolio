@@ -12,20 +12,12 @@ interface Education {
 
 const educations: Education[] = [
   {
-    institution: 'University of California, Berkeley',
-    degree: 'Bachelor of Science in Computer Science',
-    duration: '2016 - 2020',
+    institution: 'Aalim Muhammed Salegh College of Engineering, Chennai 600055',
+    degree: 'Bachelor of Electronics and Communication Engineering',
+    duration: '2022 - 2026',
     description:
-      'Graduated with honors. Relevant coursework included Data Structures, Algorithms, Computer Networks, and Software Engineering.',
+      "Pursuing a Bachelor's degree in Electronics and Communication Engineering with a strong foundation in core principles. Relevant coursework includes Microprocessors and Microcontrollers, Embedded Systems, Digital Electronics, Signal Processing, Analog and Digital Communication, and Wireless Communication.",
   },
-  {
-    institution: 'Stanford University',
-    degree: 'Master of Science in Artificial Intelligence',
-    duration: '2020 - 2022',
-    description:
-      'Focused on Machine Learning, Natural Language Processing, and Computer Vision. Thesis: "Deep Learning for Image Recognition".',
-  },
-  // Add more education entries as needed
 ];
 
 const EducationSection: React.FC = () => {
