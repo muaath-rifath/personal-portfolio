@@ -16,7 +16,7 @@ export const HeroCards = () => {
       <Card className="absolute flex flex-col drop-shadow-md shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="/assets/avatar.jpg"
+            src="/assets/profile.png"
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />

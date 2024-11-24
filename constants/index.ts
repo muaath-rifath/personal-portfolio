@@ -11,8 +11,8 @@ export const sidebarLinks = [
     },**/
     {
       imgURL: "/assets/education.svg",
-      route: "/qualifications",
-      label: "Qualifications",
+      route: "/expertise",
+      label: "Expertise",
     },
     {
       imgURL: "/assets/contact.svg",
