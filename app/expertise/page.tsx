@@ -17,6 +17,15 @@ interface ProgrammingLanguage {
   imagePath: string;
 }
 
+interface LicenseCertification {
+  title: string;
+  issuer: string;
+  issueDate: string;
+  description: string;
+  certificateLink: string;
+  imagePath: string;
+}
+
 const educations: Education[] = [
   {
     institution: 'Aalim Muhammed Salegh College of Engineering, Chennai 600055',
@@ -39,6 +48,17 @@ const programmingLanguages: ProgrammingLanguage[] = [
   {
     name: 'TypeScript',
     imagePath: '/assets/typescript.png',
+  },
+];
+
+const licensesCertifications: LicenseCertification[] = [
+  {
+    title: 'Foundation of Cloud IoT Edge ML',
+    issuer: 'NPTEL',
+    issueDate: 'April 2024',
+    description: 'Foundation of Cloud IoT Edge ML course covering Edge Computing, Cloud Integration, Docker and Kubernetes, Kafka, etc.',
+    certificateLink: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153',
+    imagePath: '/assets/NPTEL24CS26S65351013530593153.webp',
   },
 ];
 
@@ -79,30 +99,33 @@ const EducationSection: React.FC = () => {
             </p>
           </div>
           <div className="mx-auto mt-10 grid max-w-xl grid-cols-1 gap-8">
-            <Card
-              className={cn(
-                'rounded-lg p-6 shadow-lg hover:scale-105 mx-4 lg:mx-20 border border-gray-300',
-                'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
-              )}
-            >
-              <Link href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153" target='_blank'>
-              <div className="flex items-center space-x-2">
-                <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Foundation of Cloud IoT Edge ML</h3>
-              </div>
-              <p className="mt-2 text-primary dark:text-primary">NPTEL</p>
-              <p className="mt-2 text-gray-500 dark:text-gray-400">Issued: April 2024</p>
-              <Image 
-              src="/assets/NPTEL24CS26S65351013530593153.webp" 
-              alt="NPTEL Certificate"
-              height={0}
-              width={0}
-              sizes="100vw"
-              className='w-full'
-              />
-              <p className="mt-2 text-gray-600 dark:text-gray-300">Foundation of Cloud IoT Edge ML course covering Edge Computing, Cloud Integration, Docker and Kubernetes, Kafka,etc. </p>
-              </Link>
-            </Card>
+            {licensesCertifications.map((certification, index) => (
+              <Card
+                key={index}
+                className={cn(
+                  'rounded-lg p-6 shadow-lg hover:scale-105 mx-4 lg:mx-20 border border-gray-300',
+                  'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
+                )}
+              >
+                <Link href={certification.certificateLink} target='_blank'>
+                  <div className="flex items-center space-x-2">
+                    <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{certification.title}</h3>
+                  </div>
+                  <p className="mt-2 text-primary dark:text-primary">{certification.issuer}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400">Issued: {certification.issueDate}</p>
+                  <Image 
+                    src={certification.imagePath} 
+                    alt="Certificate"
+                    height={0}
+                    width={0}
+                    sizes="100vw"
+                    className='w-full'
+                  />
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">{certification.description}</p>
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
