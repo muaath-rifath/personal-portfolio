@@ -4,12 +4,24 @@ import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
+
 interface Education {
   institution: string;
   degree: string;
   duration: string;
   description?: string;
 }
+
+interface ProgrammingLanguage {
+  name: string;
+  imagePath: string;
+}
+
+const programmingLanguages: ProgrammingLanguage[] = [
+  { name: 'Python', imagePath: '/assets/python.png' },
+  { name: 'JavaScript', imagePath: '/assets/javascript.png' },
+  { name: 'TypeScript', imagePath: '/assets/typescript.png' },
+];
 
 const educations: Education[] = [
   {
@@ -32,30 +44,36 @@ const EducationSection: React.FC = () => {
               Here is my work skills and experience:
             </p>
           </div>
-          <Card className="ml-40 mt-10 grid grid-cols-1 gap-8 max-w-20 lg:grid-cols-1">
-            <div className="w-full h-full rounded-[20px] shadow-card">
-              <div className="bg-primary-500 rounded-[20px] py-3 px-3 flex justify-evenly items-center flex-col">
-                <div className="bg-white rounded-full p-2">
-                  <img
-                    src="/assets/python.png"
-                    alt="python"
-                    className="w-10 h-10 object-contain filter-none" />
+          <div className="ml-40 mt-10 flex gap-8">
+            {programmingLanguages.map((language, index) => (
+              <Card key={index} 
+              className={cn(
+                'w-24 p-4 h-full shadow-card',
+                'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
+                'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
+              )}>
+                <div className="bg-primary-500 flex justify-evenly items-center flex-col">
+                  <div className="bg-white rounded-full">
+                    <img
+                      src={language.imagePath}
+                      alt={language.name}
+                      className="w-16 h-16  filter-none rounded-full" />                  </div>
+                  <h3 className="text-white text-[15px] font-bold text-center Nanum">{language.name}</h3>
                 </div>
-                <h3 className="text-white text-[15px] font-bold text-center Nanum">Python</h3>
-              </div>
-            </div>
-          </Card>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
       <section className="w-full mt-20 pb-10">
         <div className="px-4 sm:px-6 lg:px-8 ">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">Licenses and Certifications</h2>
+          <div className="mx-10 px-8 pt-4">
+            <h2 className="font-bold tracking-tight text-white text-3xl">Licenses and Certifications</h2>
             <p className="mt-4 text-gray-400 dark:text-gray-500">
               Here are some certifications I have completed:
             </p>
           </div>
-          <div className="mx-auto mt-10 grid max-w-xl grid-cols-1 gap-8">
+          <div className="mt-10 ml-20 flex max-w-xl">
             <Card
               className={cn(
                 'rounded-lg p-6 shadow-lg hover:scale-105 mx-4 lg:mx-20 border border-gray-300',
