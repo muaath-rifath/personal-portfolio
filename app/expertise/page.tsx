@@ -4,11 +4,17 @@ import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
+
 interface Education {
   institution: string;
   degree: string;
   duration: string;
   description?: string;
+}
+
+interface ProgrammingLanguage {
+  name: string;
+  imagePath: string;
 }
 
 const educations: Education[] = [
@@ -18,6 +24,21 @@ const educations: Education[] = [
     duration: '2022 - 2026',
     description:
       "Pursuing a Bachelor's degree in Electronics and Communication Engineering with a strong foundation in core principles. Relevant coursework includes Microprocessors and Microcontrollers, Embedded Systems, Digital Electronics, Signal Processing, Analog and Digital Communication, and Wireless Communication.",
+  },
+];
+
+const programmingLanguages: ProgrammingLanguage[] = [
+  {
+    name: 'Python',
+    imagePath: '/assets/python.png',
+  },
+  {
+    name: 'JavaScript',
+    imagePath: '/assets/javascript.png',
+  },
+  {
+    name: 'TypeScript',
+    imagePath: '/assets/typescript.png',
   },
 ];
 
@@ -33,17 +54,19 @@ const EducationSection: React.FC = () => {
             </p>
           </div>
           <Card className="ml-40 mt-10 grid grid-cols-1 gap-8 max-w-20 lg:grid-cols-1">
-            <div className="w-full h-full rounded-[20px] shadow-card">
-              <div className="bg-primary-500 rounded-[20px] py-3 px-3 flex justify-evenly items-center flex-col">
-                <div className="bg-white rounded-full p-2">
-                  <img
-                    src="/assets/python.png"
-                    alt="python"
-                    className="w-10 h-10 object-contain filter-none" />
+            {programmingLanguages.map((language, index) => (
+              <div key={index} className="w-full h-full rounded-[20px] shadow-card">
+                <div className="bg-primary-500 rounded-[20px] py-3 px-3 flex justify-evenly items-center flex-col">
+                  <div className="bg-white rounded-full p-2">
+                    <img
+                      src={language.imagePath}
+                      alt={language.name.toLowerCase()}
+                      className="w-10 h-10 object-contain filter-none" />
+                  </div>
+                  <h3 className="text-white text-[15px] font-bold text-center Nanum">{language.name}</h3>
                 </div>
-                <h3 className="text-white text-[15px] font-bold text-center Nanum">Python</h3>
               </div>
-            </div>
+            ))}
           </Card>
         </div>
       </section>
