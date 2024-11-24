@@ -26,13 +26,13 @@ const EducationSection: React.FC = () => {
     <section>
       <section className="w-full mt-20 pb-10">
         <div className="px-4 sm:px-6 lg:px-8 ">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">Skills</h2>
+          <div className="mx-10 px-8 pt-4">
+            <h2 className="font-bold tracking-tight text-white text-3xl">Programming languages</h2>
             <p className="mt-4 text-gray-400 dark:text-gray-500">
               Here is my work skills and experience:
             </p>
           </div>
-          <Card className="mx-auto mt-10 grid grid-cols-1 gap-8 max-w-20 lg:grid-cols-1">
+          <Card className="ml-40 mt-10 grid grid-cols-1 gap-8 max-w-20 lg:grid-cols-1">
             <div className="w-full h-full rounded-[20px] shadow-card">
               <div className="bg-primary-500 rounded-[20px] py-3 px-3 flex justify-evenly items-center flex-col">
                 <div className="bg-white rounded-full p-2">
