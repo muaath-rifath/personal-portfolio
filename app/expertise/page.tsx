@@ -54,9 +54,12 @@ const EducationSection: React.FC = () => {
               )}>
                 <div className="bg-primary-500 flex justify-evenly items-center flex-col">
                   <div className="bg-white rounded-full">
-                    <img
+                    <Image
                       src={language.imagePath}
                       alt={language.name}
+                      height={0}
+                      sizes="100vw"
+                      width={0}
                       className="w-16 h-16  filter-none rounded-full" />                  </div>
                   <h3 className="text-white text-[15px] font-bold text-center Nanum">{language.name}</h3>
                 </div>
@@ -75,11 +78,7 @@ const EducationSection: React.FC = () => {
           </div>
           <div className="mt-10 ml-20 flex max-w-xl">
             <Card
-              className={cn(
-                'rounded-lg p-6 shadow-lg hover:scale-105 mx-4 lg:mx-20 border border-gray-300',
-                'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
-              )}
-            >
+              className='rounded-lg p-6 shadow-lg mx-4 lg:mx-20 border border-gray-300'>
               <Link href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153" target='_blank'>
               <div className="flex items-center space-x-2">
                 <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
