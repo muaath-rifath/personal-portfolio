@@ -29,7 +29,7 @@ const EducationSection: React.FC = () => {
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white text-3xl">Programming languages</h2>
             <p className="mt-4 text-gray-400 dark:text-gray-500">
-              Here is my work skills and experience:
+              Here is the programming languages I have experience with:
             </p>
           </div>
           <Card className="ml-40 mt-10 grid grid-cols-1 gap-8 max-w-20 lg:grid-cols-1">
