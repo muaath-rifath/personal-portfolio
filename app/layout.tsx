@@ -5,7 +5,11 @@ import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider";
 import Topbar from "@/components/Topbar";
-
+import localFont from 'next/font/local';
+const pyeongChangPeace = localFont({
+  src: '/fonts/PyeongChangPeace-Bold.woff2',
+  variable: '--font-pyeongchang'
+})
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +24,7 @@ const fontSans = FontSans({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={pyeongChangPeace.variable} suppressHydrationWarning>
       <head />
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",

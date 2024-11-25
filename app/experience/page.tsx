@@ -35,7 +35,7 @@ const ExperienceSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-3xl text-center font-bold tracking-tight text-white sm:text-4xl">Experience</h2>
-            <p className="mt-4 text-gray-400 dark:text-gray-500 text-center">
+            <p className="mt-4 text-gray-400 dark:text-custom-purple text-center">
               Here are some of my professional experiences:
             </p>
           </div>
@@ -49,7 +49,7 @@ const ExperienceSection: React.FC = () => {
                     </svg>
                   </span>
                   <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">{experience.position}</h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.duration}</time>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-custom-purple">{experience.duration}</time>
                   <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
                 </li>
               ))}

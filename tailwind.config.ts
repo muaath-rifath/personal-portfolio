@@ -40,6 +40,7 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        'custom-purple': 'rgb(170 166 195 / 1)',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

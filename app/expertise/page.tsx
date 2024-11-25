@@ -40,7 +40,7 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8 ">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white text-3xl">Programming languages</h2>
-            <p className="mt-4 text-gray-400 dark:text-gray-500">
+            <p className="mt-4 text-gray-400 dark:text-custom-purple">
               Here is my work skills and experience:
             </p>
           </div>
@@ -72,7 +72,7 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8 ">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white text-3xl">Licenses and Certifications</h2>
-            <p className="mt-4 text-gray-400 dark:text-gray-500">
+            <p className="mt-4 text-gray-400 dark:text-custom-purple">
               Here are some certifications I have completed:
             </p>
           </div>
@@ -81,7 +81,7 @@ const EducationSection: React.FC = () => {
               className='rounded-lg p-6 shadow-lg mx-4 lg:mx-20 border border-gray-300'>
               <Link href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153" target='_blank'>
               <div className="flex items-center space-x-2">
-                <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
+                <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-custom-purple" />
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Foundation of Cloud IoT Edge ML</h3>
               </div>
               <p className="mt-2 text-primary dark:text-primary">NPTEL</p>
@@ -104,7 +104,7 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8 ">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">Education</h2>
-            <p className="mt-4 text-gray-400 dark:text-gray-500">
+            <p className="mt-4 text-gray-400 dark:text-custom-purple">
               Here is my educational background:
             </p>
           </div>
@@ -118,7 +118,7 @@ const EducationSection: React.FC = () => {
                 )}
               >
                 <div className="flex items-center space-x-2">
-                  <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
+                  <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-custom-purple" />
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
                 </div>
                 <p className="mt-2 text-primary dark:text-primary">{education.institution}</p>
