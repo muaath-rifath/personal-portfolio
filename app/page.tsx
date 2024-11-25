@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FaGraduationCap } from "react-icons/fa";
-
 export default function Home() {
   return (
     <section className="container">
@@ -51,5 +50,6 @@ export default function Home() {
         <div className="shadow"></div>
       </section>
     </section>
+    
   );
 }

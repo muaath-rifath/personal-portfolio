@@ -5,8 +5,7 @@ import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider";
 import Topbar from "@/components/Topbar";
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -40,8 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
 
             </section>
-            <ShootingStars minDelay={700} />
-            <StarsBackground starDensity={0.0005} />
+
           </main>
         </ThemeProvider>
 

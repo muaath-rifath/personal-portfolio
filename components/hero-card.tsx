@@ -26,7 +26,7 @@ export const HeroCards = () => {
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="text-center pb-2">
+        <CardContent className="text-justify pb-2 -px-8">
           <p>
           With a passion for IoT and embedded systems, I am pursuing a Bachelor of Engineering degree in Electronics and Communication Engineering at Aalim Muhammed Salegh College of Engineering.
   
