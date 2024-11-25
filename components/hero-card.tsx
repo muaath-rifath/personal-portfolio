@@ -12,7 +12,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const HeroCards = () => {
   return (
-    <div className="flex flex-wrap gap-8 relative max-w-xl">
+    <div className="flex flex-wrap gap-8 justify-around p-12 relative max-w-xl">
       <Card className="absolute flex flex-col drop-shadow-md shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
