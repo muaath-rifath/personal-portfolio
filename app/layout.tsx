@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Topbar from "@/components/Topbar";
 import localFont from 'next/font/local';
 const pyeongChangPeace = localFont({
-  src: '/fonts/PyeongChangPeace-Bold.woff2',
+  src: '../public/fonts/PyeongChangPeace-Bold.woff2',
   variable: '--font-pyeongchang'
 })
 const inter = Inter({ subsets: ["latin"] });

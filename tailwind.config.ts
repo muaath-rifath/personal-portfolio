@@ -35,6 +35,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "Inter", "sans-serif"],
+        'star': ['var(--font-pyeongchang)']
       },
       colors: {
         border: "hsl(var(--border))",
