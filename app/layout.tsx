@@ -25,7 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable
+        fontSans.variable,
+        "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji',Segoe UI Symbol,'Noto Color Emoji'"
       )}>
         <ThemeProvider
           attribute="class"
