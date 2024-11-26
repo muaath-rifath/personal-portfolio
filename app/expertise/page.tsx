@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Interfaces remain the same as in the original code
 interface Education {
   institution: string;
   degree: string;
@@ -17,12 +18,6 @@ interface ProgrammingLanguage {
   imagePath: string;
 }
 
-const programmingLanguages: ProgrammingLanguage[] = [
-  { name: 'Python', imagePath: '/assets/python.png' },
-  { name: 'JavaScript', imagePath: '/assets/javascript.png' },
-  { name: 'TypeScript', imagePath: '/assets/typescript.png' },
-];
-
 interface LicenseCertification {
   title: string;
   issuer: string;
@@ -31,6 +26,17 @@ interface LicenseCertification {
   certificateLink: string;
   imagePath: string;
 }
+
+// Arrays remain the same as in the original code
+const programmingLanguages: ProgrammingLanguage[] = [
+  { name: 'Arduino', imagePath: '/assets/arduino.png' },
+  { name: 'JavaScript', imagePath: '/assets/javascript.png' },
+  { name: 'TypeScript', imagePath: '/assets/typescript.png' },
+  { name: 'Tailwind', imagePath: '/assets/tailwind.png' },
+  { name: 'C', imagePath: '/assets/c.png' },
+  { name: 'C++', imagePath: '/assets/cpp.png' },
+];
+
 const licensesCertifications: LicenseCertification[] = [
   {
     title: 'Foundation of Cloud IoT Edge ML',
@@ -41,12 +47,28 @@ const licensesCertifications: LicenseCertification[] = [
     imagePath: '/assets/NPTEL24CS26S65351013530593153.webp',
   },
   {
-    title: 'Foundation of Cloud IoT Edge ML',
-    issuer: 'NPTEL',
-    issueDate: 'April 2024',
-    description: 'Foundation of Cloud IoT Edge ML course covering Edge Computing, Cloud Integration, Docker and Kubernetes, Kafka, etc.',
-    certificateLink: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153',
-    imagePath: '/assets/NPTEL24CS26S65351013530593153.webp',
+    title: 'Career Essentials in GitHub',
+    issuer: 'GitHub & LinkedIn Learning',
+    issueDate: 'November 2024',
+    description: 'Foundation of GitHub and Professional Development course covering version control, collaboration, and professional skills.',
+    certificateLink: 'https://www.linkedin.com/learning/certificates/59c0e2acd4349d169fa3b3f2ddb1699dc27de2a7ab90c3676359f855889a0efc',
+    imagePath: '/assets/linkedin-github-foundations.jpg',
+  },
+  {
+    title: 'Career Essentials in Software Development',
+    issuer: 'Microsoft & LinkedIn Learning',
+    issueDate: 'November 2024',
+    description: 'Foundation of Software Development course covering programming, debugging, testing, and deployment.',
+    certificateLink: 'https://www.linkedin.com/learning/certificates/2e0a238093805d7199aa48b1f7f2792351f7eeb8dbef4f1c7accc3363fd9bcb9',
+    imagePath: '/assets/linkedin-microsoft-sd.jpg',
+  },
+  {
+    title: 'Python',
+    issuer: 'HackerRank',
+    issueDate: 'November 2024',
+    description: 'Python course covering foundational programming concepts, classes, and data structures.',
+    certificateLink: 'https://www.hackerrank.com/certificates/0227798a014b',
+    imagePath: '/assets/hackerrank-python.png',
   },
 ];
 
@@ -63,22 +85,25 @@ const educations: Education[] = [
 const EducationSection: React.FC = () => {
   return (
     <section>
+      {/* Programming Languages Section */}
       <section className="w-full mt-20 pb-10">
-        <div className="px-4 sm:px-6 lg:px-8 ">
+        <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
-            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Programming languages</h2>
+            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Programming Languages</h2>
             <p className="mt-4 text-gray-400 dark:text-custom-purple">
-              Here is my work skills and experience:
+              Here are my work skills and experience:
             </p>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
             {programmingLanguages.map((language, index) => (
-              <Card key={index}
+              <Card 
+                key={index}
                 className={cn(
                   'w-24 p-4 h-full shadow-card',
                   'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
                   'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
-                )}>
+                )}
+              >
                 <div className="bg-primary-500 flex justify-evenly items-center flex-col">
                   <div className="bg-white rounded-full">
                     <Image
@@ -87,7 +112,9 @@ const EducationSection: React.FC = () => {
                       height={0}
                       sizes="100vw"
                       width={0}
-                      className="w-16 h-16  filter-none rounded-full" />                  </div>
+                      className="w-16 h-16 filter-none rounded-full" 
+                    />
+                  </div>
                   <h3 className="text-white text-[15px] font-bold text-center Nanum">{language.name}</h3>
                 </div>
               </Card>
@@ -95,40 +122,47 @@ const EducationSection: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Licenses and Certifications Section */}
       <section className="w-full mt-20 pb-10">
-        <div className="px-4 sm:px-6 lg:px-8 ">
+        <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Licenses and Certifications</h2>
             <p className="mt-4 text-gray-400 dark:text-custom-purple">
               Here are some certifications I have completed:
             </p>
           </div>
-          <div className='ml-20'>
-            <div className=" flex mt-10 max-w-6xl gap-8">
+          <div className="mx-40">
+            <div className="flex flex-wrap lg:justify-between mt-10 max-w-6xl gap-8 justify-center">
               {licensesCertifications.map((certification, index) => (
                 <Card
                   key={index}
-                  className={cn(
-                    'rounded-lg p-6 shadow-lg mx-4 lg:mx-20 border border-gray-300',
-                    'transform bg-gray-50 transition-al rounded-lg'
-                  )}
+                  className='w-full max-w-md p-6 mb-8 shadow-lg rounded-lg border border-gray-300'
                 >
-                  <Link href={certification.certificateLink} target='_blank'>
-                    <div className="flex items-center space-x-2">
-                      <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{certification.title}</h3>
+                  <Link href={certification.certificateLink} target="_blank" className="block">
+                    <div className="flex items-start space-x-2 mb-4">
+                      <FaGraduationCap className="h-6 w-6 mt-1 text-gray-400 dark:text-gray-500" />
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        {certification.title}
+                      </h3>
                     </div>
                     <p className="mt-2 text-primary dark:text-primary">{certification.issuer}</p>
-                    <p className="mt-2 text-gray-500 dark:text-gray-400">Issued: {certification.issueDate}</p>
-                    <Image
-                      src={certification.imagePath}
-                      alt="Certificate"
-                      height={0}
-                      width={0}
-                      sizes="100vw"
-                      className='w-full'
-                    />
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">{certification.description}</p>
+                    <p className="mt-2 text-gray-500 dark:text-gray-400">
+                      Issued: {certification.issueDate}
+                    </p>
+                    <div className="mt-4 mb-4">
+                      <Image
+                        src={certification.imagePath}
+                        alt="Certificate"
+                        height={0}
+                        width={0}
+                        sizes="100vw"
+                        className="w-full h-auto object-cover rounded-lg"
+                      />
+                    </div>
+                    <p className="mt-2 text-gray-600 dark:text-gray-300">
+                      {certification.description}
+                    </p>
                   </Link>
                 </Card>
               ))}
@@ -136,8 +170,10 @@ const EducationSection: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Education Section */}
       <section className="w-full mt-20 pb-10">
-        <div className="px-4 sm:px-6 lg:px-8 ">
+        <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Education</h2>
             <p className="mt-4 text-gray-400 dark:text-custom-purple">
@@ -155,7 +191,9 @@ const EducationSection: React.FC = () => {
               >
                 <div className="flex items-center space-x-2">
                   <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-custom-purple" />
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {education.degree}
+                  </h3>
                 </div>
                 <p className="mt-2 text-primary dark:text-primary">{education.institution}</p>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">{education.duration}</p>
