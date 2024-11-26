@@ -17,7 +17,10 @@ interface ProgrammingLanguage {
   name: string;
   imagePath: string;
 }
-
+interface Framework {
+  name: string;
+  imagePath: string;
+}
 interface LicenseCertification {
   title: string;
   issuer: string;
@@ -30,14 +33,45 @@ interface LicenseCertification {
 
 // Arrays remain the same as in the original code
 const programmingLanguages: ProgrammingLanguage[] = [
-  { name: 'Arduino', imagePath: '/assets/arduino.png' },
-  { name: 'JavaScript', imagePath: '/assets/javascript.png' },
-  { name: 'TypeScript', imagePath: '/assets/typescript.png' },
-  { name: 'Tailwind', imagePath: '/assets/tailwind.png' },
-  { name: 'C', imagePath: '/assets/c.png' },
-  { name: 'C++', imagePath: '/assets/cpp.png' },
+  { 
+    name: 'Arduino',
+    imagePath: '/assets/arduino.png' 
+  },
+  { 
+    name: 'JavaScript', 
+    imagePath: '/assets/javascript.png' 
+  },
+  { 
+    name: 'TypeScript', 
+    imagePath: '/assets/typescript.png' 
+  },
+  { 
+    name: 'C', 
+    imagePath: '/assets/c.png' 
+  },
+  { 
+    name: 'C++',
+    imagePath: '/assets/cpp.png' 
+  },
 ];
-
+const frameworks: Framework[] = [
+  {
+    name: 'React',
+    imagePath: '/assets/react.png',
+  },
+  {
+    name: 'Next.js',
+    imagePath: '/assets/nextjs-icon.png',
+  },
+  {
+    name: 'Node.js',
+    imagePath: '/assets/node-js.webp',
+  },
+  { 
+    name: 'Tailwind', 
+    imagePath: '/assets/tailwind.png' 
+  },
+];
 const licensesCertifications: LicenseCertification[] = [
   {
     title: 'Foundation of Cloud IoT Edge ML',
@@ -91,12 +125,12 @@ const EducationSection: React.FC = () => {
   return (
     <section>
       {/* Programming Languages Section */}
-      <section className="w-full mt-20 pb-10">
+      <section className="w-full mt-20">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Programming Languages</h2>
             <p className="mt-4 text-gray-400 dark:text-custom-purple">
-              Here are my work skills and experience:
+            Here are the programming languages I have experience with:
             </p>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
@@ -127,9 +161,44 @@ const EducationSection: React.FC = () => {
           </div>
         </div>
       </section>
-
+      <section className="w-full mt-10">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="mx-10 px-8 pt-4">
+            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Frameworks</h2>
+            <p className="mt-4 text-gray-400 dark:text-custom-purple">
+            Here are the frameworks I have experience with:
+            </p>
+          </div>
+          <div className="ml-40 mt-10 flex gap-8">
+          {frameworks.map((framework, index) => (
+              <Card 
+                key={index}
+                className={cn(
+                  'w-24 p-4 h-full shadow-card',
+                  'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
+                  'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
+                )}
+              >
+                <div className="bg-primary-500 flex justify-evenly items-center flex-col">
+                  <div className="bg-white rounded-full">
+                    <Image
+                      src={framework.imagePath}
+                      alt={framework.name}
+                      height={0}
+                      sizes="100vw"
+                      width={0}
+                      className="w-16 h-16 filter-none rounded-full" 
+                    />
+                  </div>
+                  <h3 className="text-white text-[15px] font-bold text-center Nanum">{framework.name}</h3>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Licenses and Certifications Section */}
-      <section className="w-full mt-20 pb-10">
+      <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Licenses and Certifications</h2>
@@ -183,7 +252,7 @@ const EducationSection: React.FC = () => {
       </section>
 
       {/* Education Section */}
-      <section className="w-full mt-20 pb-10">
+      <section className="w-full mt-10 pb-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Education</h2>
