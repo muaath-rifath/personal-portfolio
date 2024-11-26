@@ -25,6 +25,7 @@ interface LicenseCertification {
   description: string;
   certificateLink: string;
   imagePath: string;
+  logoPath: string;
 }
 
 // Arrays remain the same as in the original code
@@ -45,6 +46,7 @@ const licensesCertifications: LicenseCertification[] = [
     description: 'Foundation of Cloud IoT Edge ML course covering Edge Computing, Cloud Integration, Docker and Kubernetes, Kafka, etc.',
     certificateLink: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153',
     imagePath: '/assets/NPTEL24CS26S65351013530593153.webp',
+    logoPath: '/assets/nptel.png',
   },
   {
     title: 'Career Essentials in GitHub',
@@ -53,6 +55,7 @@ const licensesCertifications: LicenseCertification[] = [
     description: 'Foundation of GitHub and Professional Development course covering version control, collaboration, and professional skills.',
     certificateLink: 'https://www.linkedin.com/learning/certificates/59c0e2acd4349d169fa3b3f2ddb1699dc27de2a7ab90c3676359f855889a0efc',
     imagePath: '/assets/linkedin-github-foundations.jpg',
+    logoPath: '/assets/github-logo.png',
   },
   {
     title: 'Career Essentials in Software Development',
@@ -61,6 +64,7 @@ const licensesCertifications: LicenseCertification[] = [
     description: 'Foundation of Software Development course covering programming, debugging, testing, and deployment.',
     certificateLink: 'https://www.linkedin.com/learning/certificates/2e0a238093805d7199aa48b1f7f2792351f7eeb8dbef4f1c7accc3363fd9bcb9',
     imagePath: '/assets/linkedin-microsoft-sd.jpg',
+    logoPath: '/assets/Microsoft_Logo.svg',
   },
   {
     title: 'Python',
@@ -69,6 +73,7 @@ const licensesCertifications: LicenseCertification[] = [
     description: 'Python course covering foundational programming concepts, classes, and data structures.',
     certificateLink: 'https://www.hackerrank.com/certificates/0227798a014b',
     imagePath: '/assets/hackerrank-python.png',
+    logoPath: '/assets/HackerRank.png',
   },
 ];
 
@@ -141,7 +146,13 @@ const EducationSection: React.FC = () => {
                 >
                   <Link href={certification.certificateLink} target="_blank" className="block">
                     <div className="flex items-start space-x-2 mb-4">
-                      <FaGraduationCap className="h-6 w-6 mt-1 text-gray-400 dark:text-gray-500" />
+                    <Image 
+                      src={certification.logoPath} 
+                      alt="Certifying Organization Logo"
+                      height={24}
+                      width={24}
+                      className='bg-white'
+                    />
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                         {certification.title}
                       </h3>
