@@ -179,7 +179,7 @@ const ExpertiseSection: React.FC = () => {
       <section className="w-full mt-20">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
-            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Programming Languages</h2>
+            <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Programming Languages</h2>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
             {programmingLanguages.map((language, index) => (
@@ -202,7 +202,7 @@ const ExpertiseSection: React.FC = () => {
                       className="w-16 h-16 filter-none rounded-full" 
                     />
                   </div>
-                  <h3 className="text-white text-[15px] font-bold text-center Nanum">{language.name}</h3>
+                  <h3 className="dark:text-white text-[15px] font-bold text-center Nanum">{language.name}</h3>
                 </div>
               </Card>
             ))}
@@ -212,7 +212,7 @@ const ExpertiseSection: React.FC = () => {
       <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
-            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Frameworks</h2>
+            <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Frameworks</h2>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
           {frameworks.map((framework, index) => (
@@ -235,7 +235,7 @@ const ExpertiseSection: React.FC = () => {
                       className="w-16 h-16 filter-none rounded-full" 
                     />
                   </div>
-                  <h3 className="text-white text-[15px] font-bold text-center Nanum">{framework.name}</h3>
+                  <h3 className="dark:text-white text-[15px] font-bold text-center Nanum">{framework.name}</h3>
                 </div>
               </Card>
             ))}
@@ -245,7 +245,7 @@ const ExpertiseSection: React.FC = () => {
       <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
-            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Tools & Infra</h2>
+            <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Tools & Infra</h2>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
           {tools_and_infra.map((tools_and_infra, index) => (
@@ -268,7 +268,7 @@ const ExpertiseSection: React.FC = () => {
                       className="w-16 h-16 filter-none rounded-full" 
                     />
                   </div>
-                  <h3 className="text-white text-[15px] font-bold text-center Nanum">{tools_and_infra.name}</h3>
+                  <h3 className="dark:text-white text-[15px] font-bold text-center Nanum">{tools_and_infra.name}</h3>
                 </div>
               </Card>
             ))}
@@ -279,7 +279,7 @@ const ExpertiseSection: React.FC = () => {
       <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
-            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Licenses and Certifications</h2>
+            <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Licenses and Certifications</h2>
           </div>
           <div className="mx-40">
             <div className="flex flex-wrap lg:justify-between mt-10 max-w-6xl gap-8 justify-center">
@@ -297,7 +297,7 @@ const ExpertiseSection: React.FC = () => {
                       width={24}
                       className='bg-white'
                     />
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:dark:text-white">
                         {certification.title}
                       </h3>
                     </div>
@@ -330,7 +330,7 @@ const ExpertiseSection: React.FC = () => {
       <section className="w-full mt-10 pb-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
-            <h2 className="font-bold tracking-tight text-white font-star text-3xl">Education</h2>
+            <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Education</h2>
           </div>
           <div className="mx-auto mt-10 ml-20 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-1">
             {educations.map((education, index) => (
@@ -343,7 +343,7 @@ const ExpertiseSection: React.FC = () => {
               >
                 <div className="flex items-center space-x-2">
                   <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-custom-purple" />
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:dark:text-white">
                     {education.degree}
                   </h3>
                 </div>

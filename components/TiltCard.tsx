@@ -42,7 +42,7 @@ export const TiltCard = ({ icon, name }: TiltCardProps) => {
             className="w-10 h-10 object-contain filter-none"
           />
         </div>
-        <h3 className="text-white text-[15px] font-bold text-center Nanum">{name}</h3>
+        <h3 className="dark:text-white text-[15px] font-bold text-center Nanum">{name}</h3>
       </div>
     </div>
   );
