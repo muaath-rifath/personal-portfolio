@@ -80,8 +80,8 @@ export default function Hero() {
   return (
     <section className="lg:flex w-full justify-center items-cente p-4">
       <div className="lg:flex flex-col p-4 backdrop-blur-xl lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
-        <span className="p-4 inline-block w-full bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-          <h1 className="text-3xl text-center font-bold">Contact</h1>
+        <span className="p-4 inline-block w-full b">
+          <h1 className="text-3xl text-center font-star font-bold">Contact</h1>
         </span>
         <div className="">
           <p className="text-lg lg:flex items-center flex-wrap gap-4">
