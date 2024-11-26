@@ -40,6 +40,14 @@ const licensesCertifications: LicenseCertification[] = [
     certificateLink: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153',
     imagePath: '/assets/NPTEL24CS26S65351013530593153.webp',
   },
+  {
+    title: 'Foundation of Cloud IoT Edge ML',
+    issuer: 'NPTEL',
+    issueDate: 'April 2024',
+    description: 'Foundation of Cloud IoT Edge ML course covering Edge Computing, Cloud Integration, Docker and Kubernetes, Kafka, etc.',
+    certificateLink: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS26S65351013530593153',
+    imagePath: '/assets/NPTEL24CS26S65351013530593153.webp',
+  },
 ];
 
 const educations: Education[] = [
@@ -65,12 +73,12 @@ const EducationSection: React.FC = () => {
           </div>
           <div className="ml-40 mt-10 flex gap-8">
             {programmingLanguages.map((language, index) => (
-              <Card key={index} 
-              className={cn(
-                'w-24 p-4 h-full shadow-card',
-                'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
-                'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
-              )}>
+              <Card key={index}
+                className={cn(
+                  'w-24 p-4 h-full shadow-card',
+                  'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
+                  'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
+                )}>
                 <div className="bg-primary-500 flex justify-evenly items-center flex-col">
                   <div className="bg-white rounded-full">
                     <Image
@@ -95,34 +103,36 @@ const EducationSection: React.FC = () => {
               Here are some certifications I have completed:
             </p>
           </div>
-          <div className="ml-20 mt-10 grid max-w-xl gap-8">
-            {licensesCertifications.map((certification, index) => (
-              <Card
-                key={index}
-                className={cn(
-                  'rounded-lg p-6 shadow-lg mx-4 lg:mx-20 border border-gray-300',
-                  'transform bg-gray-50 transition-al rounded-lg'
-                )}
-              >
-                <Link href={certification.certificateLink} target='_blank'>
-                  <div className="flex items-center space-x-2">
-                    <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{certification.title}</h3>
-                  </div>
-                  <p className="mt-2 text-primary dark:text-primary">{certification.issuer}</p>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">Issued: {certification.issueDate}</p>
-                  <Image 
-                    src={certification.imagePath} 
-                    alt="Certificate"
-                    height={0}
-                    width={0}
-                    sizes="100vw"
-                    className='w-full'
-                  />
-                  <p className="mt-2 text-gray-600 dark:text-gray-300">{certification.description}</p>
-                </Link>
-              </Card>
-            ))}
+          <div className='ml-20'>
+            <div className=" flex mt-10 max-w-6xl gap-8">
+              {licensesCertifications.map((certification, index) => (
+                <Card
+                  key={index}
+                  className={cn(
+                    'rounded-lg p-6 shadow-lg mx-4 lg:mx-20 border border-gray-300',
+                    'transform bg-gray-50 transition-al rounded-lg'
+                  )}
+                >
+                  <Link href={certification.certificateLink} target='_blank'>
+                    <div className="flex items-center space-x-2">
+                      <FaGraduationCap className="h-6 w-6 text-gray-400 dark:text-gray-500" />
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{certification.title}</h3>
+                    </div>
+                    <p className="mt-2 text-primary dark:text-primary">{certification.issuer}</p>
+                    <p className="mt-2 text-gray-500 dark:text-gray-400">Issued: {certification.issueDate}</p>
+                    <Image
+                      src={certification.imagePath}
+                      alt="Certificate"
+                      height={0}
+                      width={0}
+                      sizes="100vw"
+                      className='w-full'
+                    />
+                    <p className="mt-2 text-gray-600 dark:text-gray-300">{certification.description}</p>
+                  </Link>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
