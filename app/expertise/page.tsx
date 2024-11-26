@@ -69,12 +69,12 @@ const programmingLanguages: ProgrammingLanguage[] = [
 ];
 const frameworks: Framework[] = [
   {
-    name: 'React',
-    imagePath: '/assets/react.png',
-  },
-  {
     name: 'Next.js',
     imagePath: '/assets/nextjs-icon.png',
+  },
+  {
+    name: 'React',
+    imagePath: '/assets/react.png',
   },
   {
     name: 'Node.js',
@@ -83,6 +83,14 @@ const frameworks: Framework[] = [
   { 
     name: 'Tailwind', 
     imagePath: '/assets/tailwind.png' 
+  },
+  {
+    name: 'Prisma',
+    imagePath: '/assets/prisma-orm.png',
+  },
+  {
+    name: 'Mongoose',
+    imagePath: '/assets/mongoose-odm.jpg',
   },
 ];
 const tools_and_infra:ToolsandInfra[] = [
@@ -91,16 +99,28 @@ const tools_and_infra:ToolsandInfra[] = [
     imagePath: '/assets/github-logo.png',
   },
   {
-    name: 'Next.js',
-    imagePath: '/assets/nextjs-icon.png',
+    name: 'Git',
+    imagePath: '/assets/Git-Icon.png',
   },
   {
-    name: 'Node.js',
-    imagePath: '/assets/node-js.webp',
+    name: 'MongoDB',
+    imagePath: '/assets/MongoDB.jpg',
+  },
+  {
+    name: 'VSCode',
+    imagePath: '/assets/vscode.png',
   },
   { 
-    name: 'Tailwind', 
-    imagePath: '/assets/tailwind.png' 
+    name: 'Arduino IDE', 
+    imagePath: '/assets/arduino.png' 
+  },
+  { 
+    name: 'Thonny', 
+    imagePath: '/assets/Thonny_logo.png' 
+  },
+  {
+    name: 'Linux',
+    imagePath: '/assets/linux.png',
   },
 ];
 const licensesCertifications: LicenseCertification[] = [
@@ -125,7 +145,7 @@ const licensesCertifications: LicenseCertification[] = [
   {
     title: 'Career Essentials in Software Development',
     issuer: 'Microsoft & LinkedIn Learning',
-    issueDate: 'November 2024',
+    issueDate: 'March 2024',
     description: 'Foundation of Software Development course covering programming, debugging, testing, and deployment.',
     certificateLink: 'https://www.linkedin.com/learning/certificates/2e0a238093805d7199aa48b1f7f2792351f7eeb8dbef4f1c7accc3363fd9bcb9',
     imagePath: '/assets/linkedin-microsoft-sd.jpg',
@@ -134,7 +154,7 @@ const licensesCertifications: LicenseCertification[] = [
   {
     title: 'Python',
     issuer: 'HackerRank',
-    issueDate: 'November 2024',
+    issueDate: 'January 2024',
     description: 'Python course covering foundational programming concepts, classes, and data structures.',
     certificateLink: 'https://www.hackerrank.com/certificates/0227798a014b',
     imagePath: '/assets/hackerrank-python.png',
@@ -152,7 +172,7 @@ const educations: Education[] = [
   },
 ];
 
-const EducationSection: React.FC = () => {
+const ExpertiseSection: React.FC = () => {
   return (
     <section>
       {/* Programming Languages Section */}
@@ -160,16 +180,13 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Programming Languages</h2>
-            <p className="mt-4 text-gray-400 dark:text-custom-purple">
-            Here are the programming languages I have experience with:
-            </p>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
             {programmingLanguages.map((language, index) => (
               <Card 
                 key={index}
                 className={cn(
-                  'w-28 p-4 h-full shadow-card',
+                  'p-4 h-full shadow-card',
                   'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
                   'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
                 )}
@@ -196,9 +213,6 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Frameworks</h2>
-            <p className="mt-4 text-gray-400 dark:text-custom-purple">
-            Here are the frameworks I have experience with:
-            </p>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
           {frameworks.map((framework, index) => (
@@ -232,16 +246,13 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Tools & Infra</h2>
-            <p className="mt-4 text-gray-400 dark:text-custom-purple">
-            Here are the frameworks I have experience with:
-            </p>
           </div>
           <div className="ml-40 mt-10 flex gap-8">
           {tools_and_infra.map((tools_and_infra, index) => (
               <Card 
                 key={index}
                 className={cn(
-                  'w-24 p-4 h-full shadow-card',
+                  'p-4 h-full shadow-card',
                   'rounded-lg shadow-lg hover:scale-105 border border-gray-300',
                   'transform bg-gray-50 transition-all hover:scale-105 rounded-lg'
                 )}
@@ -269,9 +280,6 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Licenses and Certifications</h2>
-            <p className="mt-4 text-gray-400 dark:text-custom-purple">
-              Here are some certifications I have completed:
-            </p>
           </div>
           <div className="mx-40">
             <div className="flex flex-wrap lg:justify-between mt-10 max-w-6xl gap-8 justify-center">
@@ -323,9 +331,6 @@ const EducationSection: React.FC = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-10 px-8 pt-4">
             <h2 className="font-bold tracking-tight text-white font-star text-3xl">Education</h2>
-            <p className="mt-4 text-gray-400 dark:text-custom-purple">
-              Here is my educational background:
-            </p>
           </div>
           <div className="mx-auto mt-10 ml-20 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-1">
             {educations.map((education, index) => (
@@ -356,4 +361,4 @@ const EducationSection: React.FC = () => {
   );
 };
 
-export default EducationSection;
+export default ExpertiseSection;
