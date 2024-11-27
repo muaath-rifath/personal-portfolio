@@ -35,7 +35,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 To set up the environment variables for MongoDB, create a `.env` file in the root of your project and add the following:
 
 ```env
-NEXT_PUBLIC_MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 MONGODB_DB=<dbname>
 ```
 

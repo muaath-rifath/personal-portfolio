@@ -34,8 +34,8 @@ const ExperienceSection: React.FC = () => {
       <div className="pb-16 mb-16 mt-20 w-full max-w-4xl">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-3xl text-center font-bold tracking-tight text-white sm:text-4xl">Experience</h2>
-            <p className="mt-4 text-gray-400 dark:text-gray-500 text-center">
+            <h2 className="text-3xl text-center font-bold tracking-tight dark:text-white sm:text-4xl">Experience</h2>
+            <p className="mt-4 text-gray-400 dark:text-custom-purple text-center">
               Here are some of my professional experiences:
             </p>
           </div>
@@ -48,8 +48,8 @@ const ExperienceSection: React.FC = () => {
                       <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                     </svg>
                   </span>
-                  <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">{experience.position}</h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.duration}</time>
+                  <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:dark:text-white">{experience.position}</h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-custom-purple">{experience.duration}</time>
                   <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
                 </li>
               ))}

@@ -5,8 +5,11 @@ import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider";
 import Topbar from "@/components/Topbar";
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
+import localFont from 'next/font/local';
+const pyeongChangPeace = localFont({
+  src: '../public/fonts/PyeongChangPeace-Bold.woff2',
+  variable: '--font-pyeongchang'
+})
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,12 +24,11 @@ const fontSans = FontSans({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={pyeongChangPeace.variable} suppressHydrationWarning>
       <head />
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable,
-        "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji',Segoe UI Symbol,'Noto Color Emoji'"
+        fontSans.variable
       )}>
         <ThemeProvider
           attribute="class"
@@ -41,8 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
 
             </section>
-            <ShootingStars minDelay={700} />
-            <StarsBackground starDensity={0.0005} />
+
           </main>
         </ThemeProvider>
 

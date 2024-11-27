@@ -35,12 +35,13 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "Inter", "sans-serif"],
-        default: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+        'star': ['var(--font-pyeongchang)']
       },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        'custom-purple': 'rgb(170 166 195 / 1)',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
