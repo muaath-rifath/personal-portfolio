@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 // import { login } from '../../../store/authSlice'; // Ensure the path is correct or the module exists
 import { useDispatch } from 'react-redux';
 
@@ -10,12 +10,12 @@ interface useLogicRegisterProps {
     firstname: string;
     lastname: string;
     handlePhoneChange: (value: string | undefined) => void;
-    navigate: ReturnType<typeof useNavigate>;
+    navigate: ReturnType<typeof useRouter>;
   }
 
   export const useLogicRegister = (): useLogicRegisterProps => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const router = useRouter();
     const [email, setEmail] = useState('');
     const [phone , setPhone]  = useState('');
     const [password, setPassword] = useState('');
@@ -36,6 +36,6 @@ interface useLogicRegisterProps {
       firstname,
       lastname,
       handlePhoneChange,
-      navigate,
+      navigate: router,
     };
   };
