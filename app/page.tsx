@@ -1,9 +1,6 @@
 import { HeroCards } from "@/components/hero-card";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { FaGraduationCap } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -44,7 +41,7 @@ export default function Home() {
         </div>
 
         {/* Hero cards sections */}
-        <div className="w-full  md:max-lg:max-w-xl md:max-lg:flex md:max-lg:justify-center lg:px-0 lg:-mt-40 lg:pb-10">
+        <div className="w-full  md:max-lg:max-w-xl md:max-lg:flex md:max-lg:justify-center px-4 lg:px-0 lg:-mt-40 lg:pb-10">
           <HeroCards />
         </div>
         {/* Shadow effect */}
