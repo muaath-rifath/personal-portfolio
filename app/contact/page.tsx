@@ -78,12 +78,13 @@ export default function Hero() {
   }
 
   return (
-    <section className="lg:flex w-full justify-center items-cente p-4">
-      <div className="lg:flex flex-col p-4 backdrop-blur-xl lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
-        <span className="p-4 inline-block w-full b">
+    <section className="flex flex-col lg:flex-row w-full md:px-8 justify-center md:max-lg:items-center p-4">
+      {/* Contact Information */}
+      <div className="flex flex-col justify-center p-4 backdrop-blur-xl lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
+        <span className="p-4 inline-block w-full">
           <h1 className="text-3xl text-center font-star text-gray-800 dark:text-white font-bold">Contact</h1>
         </span>
-        <div className="">
+        <div className="flex flex-col justify-center">
           <p className="text-lg lg:flex items-center flex-wrap gap-4">
             <span className="flex items-center inline-block gap-2">
               <MdAttachEmail />
@@ -113,7 +114,8 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="mt-10 lg:mt-20 border border-gray-500 lg:border-l-0 lg:rounded-l-none p-10 mb-20 lg:mb-0 rounded-xl lg:w-1/3">
+      {/*Contact Form */}
+      <div className="mt-10 lg:mt-20 border  md:max-lg:max-w-xl border-gray-500 lg:border-l-0 lg:rounded-l-none p-10 mb-20 lg:mb-0 rounded-xl lg:w-1/3">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
