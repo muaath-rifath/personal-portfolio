@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { NavigateFunction } from 'react-router-dom';
-import { login } from '../../../store/authSlice';
+import { useRouter } from 'next/router';
+import { login } from '@/store/slices/authSlice';
 import { useDispatch } from 'react-redux';
+
 
 interface useLogicRegisterProps {
     email: string;
@@ -10,28 +11,29 @@ interface useLogicRegisterProps {
     firstname: string;
     lastname: string;
     handlePhoneChange: (value: string | undefined) => void;
-  }
+}
 
-export const useLogicRegister = (navigate: NavigateFunction ): useLogicRegisterProps => {
+export const useLogicRegister = (): useLogicRegisterProps => {
+    const router = useRouter();
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
-    const [phone , setPhone]  = useState('');
+    const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
-  
    
-      const handlePhoneChange = (value: string | undefined) => {
+    const handlePhoneChange = (value: string | undefined) => {
         if (value) {
-          setPhone(value);
+            setPhone(value);
         }
-      };
+    };
   
     return {
-      email,
-      phone,
-      password,      
-      firstname,
-      lastname     
+        email,
+        phone,
+        password,      
+        firstname,
+        lastname,
+        handlePhoneChange
     };
-  };
+};
