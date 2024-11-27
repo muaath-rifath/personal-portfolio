@@ -81,7 +81,7 @@ export default function Hero() {
     <section className="lg:flex w-full justify-center items-cente p-4">
       <div className="lg:flex flex-col p-4 backdrop-blur-xl lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
         <span className="p-4 inline-block w-full b">
-          <h1 className="text-3xl text-center font-star font-bold">Contact</h1>
+          <h1 className="text-3xl text-center font-star text-gray-800 dark:text-white font-bold">Contact</h1>
         </span>
         <div className="">
           <p className="text-lg lg:flex items-center flex-wrap gap-4">
