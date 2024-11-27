@@ -42,7 +42,7 @@ export default function ContactInfo() {
               </Link>:
             </span>
           </span>
-          123, Lorem Ipsum, Colombo 07
+          Avadi, Chennai, 600-055.
         </p>
       </div>
     </div>
