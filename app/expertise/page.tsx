@@ -178,10 +178,10 @@ const ExpertiseSection: React.FC = () => {
       {/* Programming Languages Section */}
       <section className="w-full mt-20">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="mx-10 px-8 pt-4">
+          <div className="lg:mx-10 lg:px-8 pl-4 pt-4">
             <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Programming Languages</h2>
           </div>
-          <div className="ml-40 mt-10 flex gap-8">
+          <div className="mx-10 lg:ml-40 mt-10 flex flex-wrap justify-center lg:justify-normal gap-8">
             {programmingLanguages.map((language, index) => (
               <Card 
                 key={index}
@@ -211,10 +211,10 @@ const ExpertiseSection: React.FC = () => {
       </section>
       <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="mx-10 px-8 pt-4">
+        <div className="lg:mx-10 lg:px-8 pl-4 pt-4">
             <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Frameworks</h2>
           </div>
-          <div className="ml-40 mt-10 flex gap-8">
+          <div className="mx-10 lg:ml-40 mt-10 flex flex-wrap justify-center lg:justify-normal gap-8">
           {frameworks.map((framework, index) => (
               <Card 
                 key={index}
@@ -244,10 +244,10 @@ const ExpertiseSection: React.FC = () => {
       </section>
       <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="mx-10 px-8 pt-4">
+        <div className="lg:mx-10 lg:px-8 pl-4 pt-4">
             <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Tools & Infra</h2>
           </div>
-          <div className="ml-40 mt-10 flex gap-8">
+          <div className="mx-10 lg:ml-40 mt-10 flex flex-wrap justify-center lg:justify-normal gap-8">
           {tools_and_infra.map((tools_and_infra, index) => (
               <Card 
                 key={index}
@@ -278,10 +278,10 @@ const ExpertiseSection: React.FC = () => {
       {/* Licenses and Certifications Section */}
       <section className="w-full mt-10">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="mx-10 px-8 pt-4">
+        <div className="lg:mx-10 lg:px-8 pl-4 pt-4">
             <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Licenses and Certifications</h2>
           </div>
-          <div className="mx-40">
+          <div className="lg:mx-40 mx-4">
             <div className="flex flex-wrap lg:justify-between mt-10 max-w-6xl gap-8 justify-center">
               {licensesCertifications.map((certification, index) => (
                 <Card
@@ -289,7 +289,7 @@ const ExpertiseSection: React.FC = () => {
                   className='w-full max-w-md p-6 mb-8 shadow-lg rounded-lg border border-gray-300'
                 >
                   <Link href={certification.certificateLink} target="_blank" className="block">
-                    <div className="flex items-start space-x-2 mb-4">
+                    <div className="flex items-center space-x-2 mb-4">
                     <Image 
                       src={certification.logoPath} 
                       alt="Certifying Organization Logo"
@@ -329,10 +329,10 @@ const ExpertiseSection: React.FC = () => {
       {/* Education Section */}
       <section className="w-full mt-10 pb-10">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="mx-10 px-8 pt-4">
+        <div className="lg:mx-10 lg:px-8 pl-4 pt-4">
             <h2 className="font-bold tracking-tight dark:text-white font-star text-3xl">Education</h2>
           </div>
-          <div className="mx-auto mt-10 ml-20 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-1">
+          <div className="mx-auto mt-10 lg:ml-20 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-1">
             {educations.map((education, index) => (
               <Card
                 key={index}
