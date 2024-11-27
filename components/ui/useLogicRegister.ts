@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { NavigateFunction } from 'react-router-dom';
-import { login } from '../../../store/authSlice';
+import { useNavigate } from 'react-router-dom';
+// import { login } from '../../../store/authSlice'; // Ensure the path is correct or the module exists
 import { useDispatch } from 'react-redux';
 
 interface useLogicRegisterProps {
@@ -10,10 +10,12 @@ interface useLogicRegisterProps {
     firstname: string;
     lastname: string;
     handlePhoneChange: (value: string | undefined) => void;
+    navigate: ReturnType<typeof useNavigate>;
   }
 
-export const useLogicRegister = (navigate: NavigateFunction ): useLogicRegisterProps => {
+  export const useLogicRegister = (): useLogicRegisterProps => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [phone , setPhone]  = useState('');
     const [password, setPassword] = useState('');
@@ -32,6 +34,8 @@ export const useLogicRegister = (navigate: NavigateFunction ): useLogicRegisterP
       phone,
       password,      
       firstname,
-      lastname     
+      lastname,
+      handlePhoneChange,
+      navigate,
     };
   };
