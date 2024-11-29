@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 // Interfaces remain the same as in the original code
 interface Education {
@@ -35,7 +36,18 @@ interface LicenseCertification {
   imagePath: string;
   logoPath: string;
 }
-
+export const metadata: Metadata = {
+  title: "Expertise - Mohamed Muaath Rifath",
+  description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
+  keywords: ["Experience", "Mohamed Muaath Rifath", "software engineering", "frontend development", "professional experience"],
+  openGraph: {
+    title: "Experience - Mohamed Muaath Rifath",
+    description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
+    // images: ["/assets/avatar.jpg"],
+    url: "https://muaathrifath.vercel.com/experience",
+    type: "website"
+  }
+};
 // Arrays remain the same as in the original code
 const programmingLanguages: ProgrammingLanguage[] = [
   { 

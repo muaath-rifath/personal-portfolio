@@ -3,6 +3,20 @@ import { FaCalendar, FaBriefcase } from 'react-icons/fa';
 import { cn } from '@/lib/utils';
 import { Car } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience - Mohamed Muaath Rifath",
+  description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
+  keywords: ["Experience", "Mohamed Muaath Rifath", "software engineering", "frontend development", "professional experience"],
+  openGraph: {
+    title: "Experience - Mohamed Muaath Rifath",
+    description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
+    // images: ["/assets/avatar.jpg"],
+    url: "https://muaathrifath.vercel.com/experience",
+    type: "website"
+  }
+};
 
 interface Experience {
   company: string;
@@ -22,7 +36,7 @@ const experiences: Experience[] = [
   {
     company: 'Globex Inc.',
     position: 'Frontend Developer Intern',
-    duration: 'Jun 2020 - Aug 2020',
+    duration: 'Jun 0 - Aug 2020',
     description:
       'Worked on building responsive user interfaces using React and Tailwind CSS. Gained experience in agile development methodologies.',
   },
