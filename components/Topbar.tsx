@@ -13,8 +13,9 @@ export default function Topbar() {
       <div className="container px-4 md:px-6">
         <div className="flex h-14 items-center">
           <Link className="mr-auto flex items-center gap-2 text-lg font-semibold" href="#">
-            <PackageIcon className="w-5 h-5" />
-            <span>Portfolio</span>
+            <Image src="/assets/logo-portfolio.svg" height={20} width={20} className="w-5 h-5 dark:hidden" alt="Portfolio Logo" />
+            <Image src="/assets/logo-portfolio-light.svg" height={20} width={20} className="w-5 h-5 invisible dark:visible" alt="Portfolio Logo" />
+            <span>MuaathRifath</span>
           </Link>
           <nav className="ml-auto hidden md:justify-center md:w-full md:flex items-center space-x-4">
           {sidebarLinks.map((link) =>{
