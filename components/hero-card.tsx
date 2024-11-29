@@ -28,7 +28,7 @@ export const HeroCards = () => {
 
         <CardContent className="text-justify pb-2 -px-8">
         <p>
-👋 Electronics and Communication Engineering student passionate about bridging physical and digital worlds through technology. Specializing in intelligent automation and edge computing solutions, I program microcontrollers and build real-time systems using modern web technologies like Next.js and TypeScript.
+👋 I am and Electronics and Communication Engineering student passionate about bridging physical and digital worlds through technology. Specializing in intelligent automation and edge computing solutions, I program microcontrollers and build real-time systems using modern web technologies like Next.js and TypeScript.
 <br />
 🚀 Currently exploring edge computing and NLP in embedded systems, developing experimental IoT solutions that merge hardware with AI. Seeking collaborative projects to leverage my unique blend of IoT expertise and full-stack development skills. Let's innovate connected devices together!
 </p>
