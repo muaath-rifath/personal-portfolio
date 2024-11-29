@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: "Learn more about Mohamed Muaath Rifath, a passionate IoT and embedded systems enthusiast pursuing a Bachelor of Engineering degree in Electronics and Communication Engineering.",
     keywords: ["Mohamed Muaath Rifath", "IoT", "embedded systems", "Electronics and Communication Engineering", "ECE", "intelligent automation", "edge computing", "Docker", "Kubernetes", "Machine Learning", "Python", "C", "Node.js", "Next.js", "TypeScript", "networking"],
     openGraph: {
-        title: "About - Mohamed Muaath Rifath",
+        title: "About",
         description: "Learn more about Mohamed Muaath Rifath, a passionate IoT and embedded systems enthusiast pursuing a Bachelor of Engineering degree in Electronics and Communication Engineering.",
         // images: ["/assets/avatar.jpg"],
         url: "https://yourwebsite.com/about",

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
   keywords: ["Experience", "Mohamed Muaath Rifath", "software engineering", "frontend development", "professional experience"],
   openGraph: {
-    title: "Experience - Mohamed Muaath Rifath",
+    title: "Experience",
     description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
     // images: ["/assets/avatar.jpg"],
     url: "https://muaathrifath.vercel.com/experience",

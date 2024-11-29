@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Get in touch with Mohamed Muaath Rifath for any inquiries or collaborations. Fill out the contact form or reach out via email or phone.",
   keywords: ["Contact", "Mohamed Muaath Rifath", "inquiries", "collaborations", "email", "phone"],
   openGraph: {
-    title: "Contact - Mohamed Muaath Rifath",
+    title: "Contact",
     description: "Get in touch with Mohamed Muaath Rifath for any inquiries or collaborations. Fill out the contact form or reach out via email or phone.",
     // images: ["/assets/avatar.jpg"],
     url: "https://muaathrifath.vercel.com/contact",

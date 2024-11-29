@@ -37,7 +37,7 @@ interface LicenseCertification {
   logoPath: string;
 }
 export const metadata: Metadata = {
-  title: "Expertise - Mohamed Muaath Rifath",
+  title: "Expertise",
   description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
   keywords: ["Experience", "Mohamed Muaath Rifath", "software engineering", "frontend development", "professional experience"],
   openGraph: {
