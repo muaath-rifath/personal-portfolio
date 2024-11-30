@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experience - Mohamed Muaath Rifath",
+  title: "Experience",
   description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
   keywords: ["Experience", "Mohamed Muaath Rifath", "software engineering", "frontend development", "professional experience"],
   openGraph: {
