@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact",
     description: "Get in touch with Mohamed Muaath Rifath for any inquiries or collaborations. Fill out the contact form or reach out via email or phone.",
-    // images: ["/assets/avatar.jpg"],
+    images: ["/assets/contact.png"],
     url: "https://muaathrifath.vercel.com/contact",
     type: "website"
   }

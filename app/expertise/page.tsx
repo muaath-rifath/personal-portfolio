@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Experience",
     description: "Explore the professional experiences of Mohamed Muaath Rifath, including roles in software engineering and frontend development.",
-    // images: ["/assets/avatar.jpg"],
+    images: ["/assets/expertise.png"],
     url: "https://muaathrifath.vercel.com/experience",
     type: "website"
   }
@@ -277,7 +277,7 @@ const ExpertiseSection: React.FC = () => {
                       height={0}
                       sizes="100vw"
                       width={0}
-                      className="w-16 h-16 filter-none rounded-full" 
+                      className="w-16 h-16 filter-none object-cover rounded-full" 
                     />
                   </div>
                   <h3 className="dark:text-white text-[15px] font-bold text-center Nanum">{tools_and_infra.name}</h3>
