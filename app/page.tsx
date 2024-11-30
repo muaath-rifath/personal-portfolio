@@ -61,7 +61,7 @@ export default function Home() {
         {/* Shadow effect */}
         <div className="shadow"></div>
       </section>
-      <div className="h-20 w-full block lg:hidden mt-96 "></div>
+      <div className="h-60 w-full block lg:hidden mt-96 "></div>
     </section>
   );
 }
