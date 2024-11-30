@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="lg:container mb-100 lg:mb-0 flex items-center justify-center">
-      <section className="grid items-center justify-center lg:grid-cols-2 md:max-lg:-mt-20 lg:h-screens place-items-center md:max-lg:py-20">
+    <section className="lg:container mb-100 lg:mb-0">
+      <section className="grid items-center justify-center lg:grid-cols-2 lg:-mt-20 lg:h-screen place-items-center md:max-lg:py-20">
         <div className="text-center px-10 h-screen lg:h-auto flex flex-col items-center lg:text-start space-y-6 mb-10 md:mb-0">
           <main className="text-5xl md:text-6xl flex flex-col items-center mt-40 lg:pt-8 font-bold">
             <h1 className="inline py-2">
@@ -55,7 +55,7 @@ export default function Home() {
         </div>
 
         {/* Hero cards sections */}
-        <div className="w-full  md:max-lg:max-w-xl md:max-lg:flex md:max-lg:justify-center px-4 lg:px-0 lg:-mt-40 lg:pb-10">
+        <div className="w-full  max-w-xl md:max-lg:flex md:max-lg:justify-center px-4 lg:px-0 lg:-mt-40">
           <HeroCards />
         </div>
         {/* Shadow effect */}

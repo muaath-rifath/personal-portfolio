@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss"
-
+const plugin = require('tailwindcss/plugin')
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const {
@@ -10,7 +10,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
@@ -22,7 +22,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -97,6 +97,9 @@ const config = {
   plugins: [
     require("tailwindcss-animate"),
     addVariablesForColors,
+    plugin(({ addVariant }: { addVariant: (name: string, value: string) => void }) => {
+      addVariant('firefox', '@supports (-moz-appearance: none)')
+    }),
   ],
 } satisfies Config
 

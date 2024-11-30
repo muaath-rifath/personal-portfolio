@@ -13,7 +13,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 export const HeroCards = () => {
   return (
     <div className="flex flex-wrap gap-8 justify-around p-12 mx-auto relative w-full lg:max-w-xl">
-      <Card className="absolute flex flex-col drop-shadow-md shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
+      <Card className="absolute flex flex-col drop-shadow-md lg:mx-8 firefox:lg:mx-0 shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
             src="/assets/profile.png"
@@ -26,7 +26,7 @@ export const HeroCards = () => {
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="text-justify pb-2 -px-8">
+        <CardContent className="text-justify pb-2">
         <p className="indent-5">
 👋 I am an Electronics and Communication Engineering student passionate about bridging physical and digital worlds through technology. Specializing in intelligent automation and edge computing solutions, I program microcontrollers and build real-time systems using modern web technologies like Next.js and TypeScript.
 <br />
