@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="lg:container mb-100">
-      <section className="grid lg:grid-cols-2 -mt-20 lg:h-screen lg:-mt-40 place-items-center py-20 lg:py-32 gap-20">
+    <section className="lg:container mb-100 lg:mb-0 flex items-center justify-center">
+      <section className="grid items-center justify-center lg:grid-cols-2 md:max-lg:-mt-20 lg:h-screens place-items-center md:max-lg:py-20">
         <div className="text-center px-10 h-screen lg:h-auto flex flex-col items-center lg:text-start space-y-6 mb-10 md:mb-0">
           <main className="text-5xl md:text-6xl flex flex-col items-center mt-40 lg:pt-8 font-bold">
             <h1 className="inline py-2">
