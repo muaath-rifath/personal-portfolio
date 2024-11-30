@@ -55,7 +55,7 @@ export default function Home() {
         </div>
 
         {/* Hero cards sections */}
-        <div className="w-full  max-w-xl md:max-lg:flex md:max-lg:justify-center px-4 lg:px-0 lg:-mt-40">
+        <div className="w-full  max-w-xl md:max-lg:flex md:max-lg:justify-center firefox:px-0 px-4 lg:px-0 lg:-mt-40">
           <HeroCards />
         </div>
         {/* Shadow effect */}
