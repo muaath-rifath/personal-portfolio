@@ -3,7 +3,7 @@ import ContactInfo from "@/components/ContactInfo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact - Mohamed Muaath Rifath",
+  title: "Contact",
   description: "Get in touch with Mohamed Muaath Rifath for any inquiries or collaborations. Fill out the contact form or reach out via email or phone.",
   keywords: ["Contact", "Mohamed Muaath Rifath", "inquiries", "collaborations", "email", "phone"],
   openGraph: {
