@@ -18,6 +18,7 @@ import { z } from "zod";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/toaster";
 import { submitContact } from "@/app/_actions/contact";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const FormSchema = z.object({
   name: z.string().min(2, {
@@ -28,7 +29,7 @@ const FormSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
-export default function ContactForm() {
+function ContactFormInner() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -40,10 +41,17 @@ export default function ContactForm() {
   });
 
   const { toast } = useToast();
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
+    if (!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+      return;
+    }
+
     try {
-      const result = await submitContact(data);
+      const token = await executeRecaptcha("contact_form");
+      const result = await submitContact({ ...data, recaptchaToken: token });
 
       if (result.success) {
         toast({
@@ -130,5 +138,13 @@ export default function ContactForm() {
       </Form>
       <Toaster />
     </div>
+  );
+}
+
+export default function ContactForm() {
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}>
+      <ContactFormInner />
+    </GoogleReCaptchaProvider>
   );
 }
