@@ -12,10 +12,18 @@ interface ContactData {
 
 const initializeFirebaseAdmin = () => {
   if (!admin.apps.length) {
-    admin.initializeApp({
-      credential: admin.credential.applicationDefault(),
-      databaseURL: process.env.FIREBASE_DATABASE_URL,
-    });
+    try {
+      const serviceAccount = JSON.parse(
+        process.env.FIREBASE_SERVICE_ACCOUNT_KEY as string
+      );
+      
+      admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+      });
+    } catch (error) {
+      console.error('Firebase admin initialization error:', error);
+      throw new Error('Failed to initialize Firebase Admin');
+    }
   }
   return admin.firestore();
 };
