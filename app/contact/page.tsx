@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <section className="flex flex-col -z-10 lg:flex-row w-full md:px-8 justify-center md:max-lg:items-center p-4">
+    <section className="flex flex-col lg:flex-row w-full md:px-8 justify-center md:max-lg:items-center p-4">
       <ContactInfo />
       <ContactForm />
     </section>
