@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ContactInfo() {
   return (
-    <div className="flex flex-col justify-center p-4 backdrop-blur-xl lg:items-center -z-10 lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
+    <div className="flex flex-col justify-center p-4 backdrop-blur-xl lg:items-center lg:mt-20 lg:border border-gray-500 rounded-r-none pt-20 lg:py-40 rounded-xl lg:w-1/3">
       <span className="p-4 inline-block w-full">
         <h1 className="text-3xl text-center font-star text-gray-800 dark:text-white font-bold">
           Contact
