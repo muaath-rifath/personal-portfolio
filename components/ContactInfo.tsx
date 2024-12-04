@@ -1,6 +1,7 @@
 import { FaAddressCard, FaPhoneAlt } from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
 import Link from "next/link";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ContactInfo() {
   return (
@@ -12,37 +13,40 @@ export default function ContactInfo() {
       </span>
       <div className="flex flex-col justify-center">
         <p className="text-lg lg:flex items-center flex-wrap gap-4">
-          <span className="flex items-center inline-block gap-2">
+          <span className="flex items-center  gap-2">
             <MdAttachEmail />
             <span className="text-primary">
-              <Link href="mailto:muaathrifath@gmail.com" target="_blank" type="email">
-                Email
-              </Link>:
+                Email:
             </span>
           </span>
-          muaathrifath@gmail.com
+          <Link href="mailto:muaathrifath@gmail.com" target="_blank" type="email" className="flex items-center gap-2 flex-nowrap inline-block">
+             muaathrifath@gmail.com
+          <FaExternalLinkAlt className="w-3 h-3 inline-block"/>
+          </Link>
         </p>
         <p className="text-lg lg:flex items-center flex-wrap gap-4">
           <span className="flex items-center inline-block gap-2">
             <FaPhoneAlt />
             <span className="text-primary">
-              <Link href="tel:+918883735079" target="_blank" type="tel">
-                Phone
-              </Link>:
+                Phone:
             </span>
           </span>
+          <Link href="tel:+918883735079" target="_blank" type="tel" className="flex items-center gap-2 flex-nowrap inline-block">
           +91 88837 35079
+          <FaExternalLinkAlt className="w-3 h-3 inline-block"/>
+          </Link>
         </p>
         <p className="text-lg lg:flex items-center flex-wrap gap-4">
           <span className="flex items-center inline-block gap-2">
             <FaAddressCard />
             <span className="text-primary">
-              <Link href="" target="_blank">
-                Address
-              </Link>:
+                Address:
             </span>
           </span>
+              <Link href="" target="_blank" className="flex items-center gap-2 flex-nowrap inline-block">
           Avadi, Chennai, 600-055.
+          <FaExternalLinkAlt className="w-3 h-3 inline-block"/>
+              </Link>
         </p>
       </div>
     </div>
