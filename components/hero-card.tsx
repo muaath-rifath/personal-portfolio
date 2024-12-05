@@ -22,7 +22,7 @@ export const HeroCards = () => {
           />
           <CardTitle className="text-center">Mohamed Muaath Rifath <span className="inline-block">L M</span></CardTitle>
           <CardDescription className="font-normal text-primary dark:text-primary">
-            Software Engineer
+            Embedded Engineer
           </CardDescription>
         </CardHeader>
 
