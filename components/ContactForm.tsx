@@ -76,7 +76,7 @@ function ContactFormInner() {
   }
 
   return (
-    <div className="mt-10 lg:mt-20 border md:max-lg:max-w-xl border-gray-500 lg:border-l-0 lg:rounded-l-none p-10 mb-20 lg:mb-0 rounded-xl lg:w-1/3">
+    <div className="mt-10 lg:mt-20 border md:max-lg:max-w-xl border-gray-500 lg:border-l-0 lg:rounded-l-none p-10 mb-20 lg:mb-0 rounded-xl lg:w-1/3 relative z-[1]">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 flex flex-col items-start">
           <FormField

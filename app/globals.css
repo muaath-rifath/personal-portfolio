@@ -2,6 +2,9 @@
   @tailwind components;
   @tailwind utilities;
 
+  .grecaptcha-badge {
+    z-index: 999 !important;
+  }
 
   @layer base {
     :root {
@@ -48,4 +51,5 @@
       --input: 12 6.5% 15.1%;
       --ring: 20.5 90.2% 48.2%;
     }
+    
   }
