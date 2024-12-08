@@ -17,7 +17,9 @@ export default function GoogleCaptchaWrapper({
         appendTo: "head",
       }}
     >
+      <section className="-z-10 absolute inset-0">
       {children}
+      </section>
     </GoogleReCaptchaProvider>
   );
 }
