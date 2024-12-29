@@ -16,9 +16,9 @@ export const HeroCards = () => {
       <Card className="absolute flex flex-col drop-shadow-md lg:mx-8 firefox:lg:mx-0 shadow-black/10 dark:shadow-white/10">{/* shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] */}
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="/assets/profile.png"
+            src="/assets/profile-1.png"
             alt="user avatar"
-            className="absolute grayscale-[0%] bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] -top-12 rounded-full w-24 h-24 aspect-square object-cover "
+            className="absolute grayscale-[0%] bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
           <CardTitle className="text-center">Mohamed Muaath Rifath <span className="inline-block">L M</span></CardTitle>
           <CardDescription className="font-normal text-primary dark:text-primary">
