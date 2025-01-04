@@ -19,8 +19,8 @@ export default function ContactInfo() {
                 Email:
             </span>
           </span>
-          <Link href="mailto:muaathrifath@gmail.com" target="_blank" type="email" className="flex items-center gap-2 flex-nowrap inline-block">
-             muaathrifath@gmail.com
+          <Link href="mailto:contact@muaathrifath.tech" target="_blank" type="email" className="flex items-center gap-2 flex-nowrap inline-block">
+             contact@muaathrifath.tech
           <FaExternalLinkAlt className="w-3 h-3 inline-block"/>
           </Link>
         </p>
