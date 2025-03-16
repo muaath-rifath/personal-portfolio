@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Muaath Rifath",
     description: "Welcome to the personal portfolio of Mohamed Muaath Rifath, an ECE student specializing in IoT and Embedded Systems.",
     images: ["/assets/home.png"],
-    url: "https://muaathrifath.vercel.com",
+    url: "https://muaathrifath.tech",
     type: "website"
   }
 };
